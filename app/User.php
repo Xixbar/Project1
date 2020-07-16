@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function AuthRouteAPI(Request $request){
+        return $request->user();
+     }
+
     /**
      * The attributes that are mass assignable.
      *
